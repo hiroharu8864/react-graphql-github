@@ -17,10 +17,5 @@ const queryClient = new QueryClient({
 });
 
 export default function App() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <ReactQueryDevtools initialIsOpen={false} />
-      <Router />
-    </QueryClientProvider>
-  );
+  return <Router />;
 }
