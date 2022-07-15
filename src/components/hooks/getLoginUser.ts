@@ -1,5 +1,5 @@
 export const getLoginUser = async (): Promise<any> => {
-  const access_token = "token";
+  const access_token = "ghp_token";
 
   const { response } = await fetch("https://api.github.com/graphql", {
     method: "POST",
@@ -19,5 +19,5 @@ export const getLoginUser = async (): Promise<any> => {
     })
   });
   console.log(response);
-  return response.json();
+  return await response.json();
 };
