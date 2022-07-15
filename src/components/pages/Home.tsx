@@ -8,7 +8,7 @@ export const Home: FC = memo(() => {
   }, [navigate]);
   return (
     <>
-      <p>SWR FetchCheck</p>
+      <p>GraphQL client Check</p>
       <button onClick={onClickFetchCheck}>Get GraphQL query</button>
     </>
   );
