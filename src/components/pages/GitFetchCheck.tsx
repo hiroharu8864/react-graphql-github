@@ -2,9 +2,9 @@ import { FC, memo, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const GitFetchCheck: FC = memo(() => {
-  const checkGraphQLClick = () => {
+  const checkGraphQLClick = async () => {
     try {
-      fetch("https://api.github.com/graphql", {
+      await fetch("https://api.github.com/graphql", {
         method: "POST",
         headers: {
           Authorization: "bearer ghp_token",
@@ -23,8 +23,8 @@ export const GitFetchCheck: FC = memo(() => {
           variables: { loginUser: "hiroharu8864" }
         })
       }).then((response) => {
-        console.log(response);
-        return response.json();
+        console.log(response.json());
+        return response;
       });
     } catch (error) {
       alert(error);
