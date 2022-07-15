@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { getLoginUser } from "../hooks/getLoginUser";
 
 export const FetchCheck: FC = memo(() => {
+  const { response } = getLoginUser();
+  console.log(response);
+
   const navigate = useNavigate();
   const onClickFetchCheck = useCallback(() => {
     navigate("/");
