@@ -1,2 +1,2 @@
-# react-graphql-github
+# react-zero-app
 Created with CodeSandbox
