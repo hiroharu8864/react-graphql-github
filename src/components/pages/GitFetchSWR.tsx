@@ -13,7 +13,7 @@ export const GitFetchSWR: FC = memo(() => {
 
   return (
     <>
-      <p>GraphQL client Check</p>
+      <h2>GraphQL API Response</h2>
       <p>{data?.data.viewer.id}</p>
       <p>{data?.data.viewer.login}</p>
       <p>{data?.data.viewer.url}</p>
